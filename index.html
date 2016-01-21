@@ -172,8 +172,8 @@
     <article id="post-mac配置php环境" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/18/mac配置php环境/" class="article-date">
-  	<time datetime="2016-01-18T14:07:22.000Z" itemprop="datePublished">2016-01-18</time>
+      <a href="/2016/01/21/mac配置php环境/" class="article-date">
+  	<time datetime="2016-01-21T09:30:52.000Z" itemprop="datePublished">2016-01-21</time>
 </a>
     </div>
   
@@ -186,7 +186,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/18/mac配置php环境/">mac下配置php环境</a>
+      <a class="article-title" href="/2016/01/21/mac配置php环境/">mac下配置php环境</a>
     </h1>
   
 
@@ -206,6 +206,8 @@
 <p>&lt;?php phpinfo(); ?&gt;</p>
 <p>重启php服务<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">sudo</span> apachectl restart</span><br></pre></td></tr></table></figure></p>
 <p>在浏览器中访问localhost，应该显示出php的info页</p>
+<p>Mac OS X中没有默认的php.ini文件，但是有对应的模版文件php.ini.default，位于/private/etc/php.ini.default 或者说 /etcphp.ini/default ，可以自行拷贝一份进行修改。<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp <span class="regexp">/private/</span>etc<span class="regexp">/php.ini.default /</span><span class="keyword">private</span><span class="regexp">/etc/</span>php.ini</span><br></pre></td></tr></table></figure></p>
+<p>#解决php页面报错：<br>date(): It is not safe to rely on the system’s timezone settings. You are <em>required</em> to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected ‘Asia/Chongqing’ for ‘CST/8.0/no DST’ instead<br>解决：<br>修改php.ini<br>添加：date.timezone = “Asia/Shanghai”</p>
 
       
     </div>
