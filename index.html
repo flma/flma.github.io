@@ -172,8 +172,8 @@
     <article id="post-mac配置php环境" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/21/mac配置php环境/" class="article-date">
-  	<time datetime="2016-01-21T09:30:52.000Z" itemprop="datePublished">2016-01-21</time>
+      <a href="/2016/01/22/mac配置php环境/" class="article-date">
+  	<time datetime="2016-01-22T02:23:21.000Z" itemprop="datePublished">2016-01-22</time>
 </a>
     </div>
   
@@ -186,7 +186,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/21/mac配置php环境/">mac下配置php环境</a>
+      <a class="article-title" href="/2016/01/22/mac配置php环境/">mac下配置php环境</a>
     </h1>
   
 
@@ -201,8 +201,8 @@
 <p>找到</p>
 <p>#LoadModule php5_module libexec/apache2/libphp5.so，去掉前面的#<br>默认的www文件夹非常不方便，还是改成在home里开发起来比较顺手，修改apache配置<br>，还是上面的文件</p>
 <p>#将引号中的目录修改为自己的目录<br>DocumentRoot “/Library/WebServer/Documents”<br>……</p>
-<p>#将引号中的目录修改为和上面一样的目录</p>
-<p><directory "="" library="" webserver="" documents"=""><br>在自己的目录中创建文件index.php，写入</directory></p>
+<p>#将引号中的目录修改为和上面一样的目录<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">Directory</span> <span class="string">"/Library/WebServer/Documents"</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在自己的目录中创建文件index.php，写入</p>
 <p>&lt;?php phpinfo(); ?&gt;</p>
 <p>重启php服务<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">sudo</span> apachectl restart</span><br></pre></td></tr></table></figure></p>
 <p>在浏览器中访问localhost，应该显示出php的info页</p>
