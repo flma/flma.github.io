@@ -3,30 +3,37 @@
 <head>
   <meta charset="utf-8">
   
-  <title>mac下配置php环境 | flma’s blog</title>
+  <title>zabbix使用email类型来配置邮箱发送环境 | flma’s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Apache与PHP的配置Mac系统自带了apache和php，但默认情况下没有开启，打开终端
-1sudo apachectl start
-这时在浏览器中输入localhost应该就会出现apache标准的It Works!下面开启php，修改apache配置文件1sudo vim /etc/apache2/httpd.conf
-找到
-#LoadModule php5_module libexec">
+  <meta name="description" content="之前按照网上方法配置zabbix email一直不成功，报各种各样的错误。现总结方法如下：
+
+具体操作如下：
+
+1.安装postfix或者sendmail（在这里我是用的postfix）
+123456//安装yum install postfix//启动service postfix start//设置开机启动chkconfig postfix on
+可能会遇见一个问题：Send-Mail: Wa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac下配置php环境">
-<meta property="og:url" content="http://yoursite.com/2016/01/22/mac配置php环境/index.html">
+<meta property="og:title" content="zabbix使用email类型来配置邮箱发送环境">
+<meta property="og:url" content="http://yoursite.com/2016/01/28/zabbix使用email类型来配置邮箱发送环境/index.html">
 <meta property="og:site_name" content="flma’s blog">
-<meta property="og:description" content="Apache与PHP的配置Mac系统自带了apache和php，但默认情况下没有开启，打开终端
-1sudo apachectl start
-这时在浏览器中输入localhost应该就会出现apache标准的It Works!下面开启php，修改apache配置文件1sudo vim /etc/apache2/httpd.conf
-找到
-#LoadModule php5_module libexec">
-<meta property="og:updated_time" content="2016-01-22T02:23:21.000Z">
+<meta property="og:description" content="之前按照网上方法配置zabbix email一直不成功，报各种各样的错误。现总结方法如下：
+
+具体操作如下：
+
+1.安装postfix或者sendmail（在这里我是用的postfix）
+123456//安装yum install postfix//启动service postfix start//设置开机启动chkconfig postfix on
+可能会遇见一个问题：Send-Mail: Wa">
+<meta property="og:image" content="http://yoursite.com/images/email.png">
+<meta property="og:updated_time" content="2016-01-28T01:29:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mac下配置php环境">
-<meta name="twitter:description" content="Apache与PHP的配置Mac系统自带了apache和php，但默认情况下没有开启，打开终端
-1sudo apachectl start
-这时在浏览器中输入localhost应该就会出现apache标准的It Works!下面开启php，修改apache配置文件1sudo vim /etc/apache2/httpd.conf
-找到
-#LoadModule php5_module libexec">
+<meta name="twitter:title" content="zabbix使用email类型来配置邮箱发送环境">
+<meta name="twitter:description" content="之前按照网上方法配置zabbix email一直不成功，报各种各样的错误。现总结方法如下：
+
+具体操作如下：
+
+1.安装postfix或者sendmail（在这里我是用的postfix）
+123456//安装yum install postfix//启动service postfix start//设置开机启动chkconfig postfix on
+可能会遇见一个问题：Send-Mail: Wa">
   
     <link rel="alternative" href="/atom.xml" title="flma’s blog" type="application/atom+xml">
   
@@ -180,11 +187,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-mac配置php环境" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-zabbix使用email类型来配置邮箱发送环境" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/22/mac配置php环境/" class="article-date">
-  	<time datetime="2016-01-22T02:23:21.000Z" itemprop="datePublished">2016-01-22</time>
+      <a href="/2016/01/28/zabbix使用email类型来配置邮箱发送环境/" class="article-date">
+  	<time datetime="2016-01-28T01:29:57.000Z" itemprop="datePublished">2016-01-28</time>
 </a>
     </div>
   
@@ -197,7 +204,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      mac下配置php环境
+      zabbix使用email类型来配置邮箱发送环境
     </h1>
   
 
@@ -206,7 +213,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zabbix/">zabbix</a></li></ul>
 	</div>
 
         
@@ -217,19 +224,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Apache与PHP的配置"><strong>Apache与PHP的配置</strong></h2><p>Mac系统自带了apache和php，但默认情况下没有开启，打开终端</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl <span class="literal">start</span></span><br></pre></td></tr></table></figure>
-<p>这时在浏览器中输入localhost应该就会出现apache标准的It Works!<br>下面开启php，修改apache配置文件<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vim</span> /etc/apache2/httpd.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure></p>
-<p>找到</p>
-<p>#LoadModule php5_module libexec/apache2/libphp5.so，去掉前面的#<br>默认的www文件夹非常不方便，还是改成在home里开发起来比较顺手，修改apache配置<br>，还是上面的文件</p>
-<p>#将引号中的目录修改为自己的目录<br>DocumentRoot “/Library/WebServer/Documents”<br>……</p>
-<p>#将引号中的目录修改为和上面一样的目录<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">Directory</span> <span class="string">"/Library/WebServer/Documents"</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<p>在自己的目录中创建文件index.php，写入</p>
-<p>&lt;?php phpinfo(); ?&gt;</p>
-<p>重启php服务<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">sudo</span> apachectl restart</span><br></pre></td></tr></table></figure></p>
-<p>在浏览器中访问localhost，应该显示出php的info页</p>
-<p>Mac OS X中没有默认的php.ini文件，但是有对应的模版文件php.ini.default，位于/private/etc/php.ini.default 或者说 /etcphp.ini/default ，可以自行拷贝一份进行修改。<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp <span class="regexp">/private/</span>etc<span class="regexp">/php.ini.default /</span><span class="keyword">private</span><span class="regexp">/etc/</span>php.ini</span><br></pre></td></tr></table></figure></p>
-<p>#解决php页面报错：<br>date(): It is not safe to rely on the system’s timezone settings. You are <em>required</em> to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected ‘Asia/Chongqing’ for ‘CST/8.0/no DST’ instead<br>解决：<br>修改php.ini<br>添加：date.timezone = “Asia/Shanghai”</p>
+        <p>之前按照网上方法配置zabbix email一直不成功，报各种各样的错误。现总结方法如下：</p>
+<ul>
+<li>具体操作如下：</li>
+</ul>
+<p>1.安装postfix或者sendmail（在这里我是用的postfix）</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//安装</span></span><br><span class="line">yum install <span class="keyword">postfix</span></span><br><span class="line"><span class="comment">//启动</span></span><br><span class="line">service <span class="keyword">postfix</span> start</span><br><span class="line"><span class="comment">//设置开机启动</span></span><br><span class="line">chkconfig <span class="keyword">postfix</span> on</span><br></pre></td></tr></table></figure>
+<p>可能会遇见一个问题：Send-Mail: Warning: Inet_protocols: IPv6 Support Is Disabled<br>修改postfix配置文件中的inet_protocols<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//编辑main.cf文件</span></span><br><span class="line">vi /etc/<span class="keyword">postfix</span>/main.cf</span><br><span class="line"><span class="comment">//找到inet_protocols=all改为</span></span><br><span class="line">inet_protocols=ipv4</span><br><span class="line"><span class="comment">//保存</span></span><br><span class="line">:wq!</span><br><span class="line"><span class="comment">//重启postfix</span></span><br><span class="line">/etc/<span class="keyword">init</span>.d/<span class="keyword">postfix</span> restart</span><br></pre></td></tr></table></figure></p>
+<p>2.安装邮件发送工具mailx<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//安装</span></span><br><span class="line">yum install mailx</span><br><span class="line"><span class="comment">//查看安装路径</span></span><br><span class="line">whereis mailx</span><br><span class="line"><span class="comment">//查看版本信息</span></span><br><span class="line">mailx -V</span><br></pre></td></tr></table></figure></p>
+<p>3.配置Zabbix服务端邮件报警</p>
+<ol>
+<li>打开Zabbix，打开管理-示警媒介类型-Email，配置如下:<br><img src="/images/email.png" alt="这是一张图片"></li>
+</ol>
 
       
     </div>
@@ -239,18 +245,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/01/28/zabbix使用email类型来配置邮箱发送环境/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          zabbix使用email类型来配置邮箱发送环境
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/12/ios之内存管理/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ios之内存管理</div>
+    <a href="/2016/01/22/mac配置php环境/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mac下配置php环境</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -279,7 +276,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="mac配置php环境" data-title="mac下配置php环境" data-url="http://yoursite.com/2016/01/22/mac配置php环境/"></div>
+	<div class="ds-thread" data-thread-key="zabbix使用email类型来配置邮箱发送环境" data-title="zabbix使用email类型来配置邮箱发送环境" data-url="http://yoursite.com/2016/01/28/zabbix使用email类型来配置邮箱发送环境/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
