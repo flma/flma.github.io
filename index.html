@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/zabbix/" style="font-size: 10px;">zabbix</a>
+						<a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/zabbix/" style="font-size: 10px;">zabbix</a>
 					</div>
 				</section>
 				
@@ -168,6 +168,126 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-mac安装maven" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/19/mac安装maven/" class="article-date">
+  	<time datetime="2016-07-19T03:30:50.000Z" itemprop="datePublished">2016-07-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/19/mac安装maven/">mac下安装maven</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="mac下安装maven"><strong>mac下安装maven</strong></h2><p>1.下载[maven]:  <a href="http://maven.apache.org/download.cgi" target="_blank" rel="external">http://maven.apache.org/download.cgi</a><br>，并解压到某个目录下：如我的目录为/usr/local/maven3.3.9</p>
+<p>2.在控制台输入命令<em>/usr/libexec/java_home [-V]</em>,查看javaHome</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/Library/</span>Java<span class="regexp">/JavaVirtualMachines/</span>jdk1.<span class="number">7.0</span>_75.jdk<span class="regexp">/Contents/</span>Home</span><br></pre></td></tr></table></figure>
+<p>3.在命令台输入<em>vi ~/.bash_profile</em>，在文件中加入</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.<span class="number">7.0_75</span>.jdk/Contents/Home</span><br><span class="line">M3_HOME=/usr/local/maven3.<span class="number">3.9</span></span><br><span class="line">PATH=<span class="variable">$M3</span>_HOME/bin:<span class="variable">$PATH</span></span><br><span class="line">export M3_HOME</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
+<p>4.保存，执行<em>source ~/.bash_profile</em></p>
+<p>5.输入mvn -v 不报错，即安装完成</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-高仿天猫登录-axure第一篇" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/19/高仿天猫登录-axure第一篇/" class="article-date">
+  	<time datetime="2016-07-19T03:14:15.000Z" itemprop="datePublished">2016-07-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/19/高仿天猫登录-axure第一篇/">高仿天猫登录-axure第一篇</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本篇只为了纪录学习axure，如果有侵犯，请联系本人，本人将即时作出调整。</p>
+<ul>
+<li>具体操作如下：</li>
+</ul>
+<p>1.设置页面，是页面内容居中<br><img src="/images/axure/login/login_01.png" alt="这是一张图片"><br>2.拖入矩形框，设置x为0，y为0，w为1190，h为80，border为none<br><img src="/images/axure/login/login_02.png" alt="这是一张图片"><br>3.拖入天猫图片，x为0，y为30，w为1190，h为27<br><img src="/images/axure/login/login_03.png" alt="这是一张图片"><br>4.拖入动态面板，x为0，y为80，w为1190，h为600；右键选中100％ Wide<br><img src="/images/axure/login/login_04.png" alt="这是一张图片"><br>5.双击动态的State1，设置背景色为#4153c3<br><img src="/images/axure/login/login_05.png" alt="这是一张图片"><br>6.在动态State1中，拖入图片，设置x为0，y为0，w为1190，h为600<br><img src="/images/axure/login/login_06.png" alt="这是一张图片"><br>7.拖入矩形框，设置背景色为白色，x为820，y为91，w为350，h为404<br><img src="/images/axure/login/login_07.png" alt="这是一张图片"><br>8.拖入图片，x为953，y为100，w为211，h为57<br><img src="/images/axure/login/login_08.png" alt="这是一张图片"><br>9.拖入文本框，设置字体颜色#3c3c3c，x为847，y为130，w为65，h为16，字体大小为16，加粗<br><img src="/images/axure/login/login_09.png" alt="这是一张图片"><br>10.拖入矩形框，设置border颜色为#cbcbcb，x为847，因为170，w为298，h为40<br><img src="/images/axure/login/login_10.png" alt="这是一张图片"><br>11.拖入图片和文本框，设置隐藏文本框，设置hint text和hint style<br><img src="/images/axure/login/login_11.png" alt="这是一张图片"><br>12.复制账号框，更换图片<br><img src="/images/axure/login/login_12.png" alt="这是一张图片"><br>13.拖入矩形框，设置w为298，h为40，border为#dddddd,字体颜色为#9c9c9c,背景色为#e8e8e8<br><img src="/images/axure/login/login_13.png" alt="这是一张图片"><br>14.拖入矩形框，设置滑块w为40，h为40，border为#cccccc,字体颜色为#737373<br><img src="/images/axure/login/login_14.png" alt="这是一张图片"><br>15.拖入文本框，设置颜色为#6c6c6c，鼠标滑过颜色为#c40000<br><img src="/images/axure/login/login_15.png" alt="这是一张图片"><br>16.拖入矩形框，同上设置</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/axure/">axure</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-zabbix使用email类型来配置邮箱发送环境" class="article article-type-post" itemscope itemprop="blogPost">
   
