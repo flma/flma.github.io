@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>flma’s blog</title>
+  <title>Linux搭建git、gitolite环境 | flma’s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="flma’s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Linux搭建git、gitolite环境1.安装git依赖包，命令
+1yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+2.下载git包，下载地址
+1https://github.com/git/git/releases
+3.解压文件到当前目录，并安装
+1234tar xf git-2.9.2.ta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux搭建git、gitolite环境">
+<meta property="og:url" content="http://yoursite.com/2016/07/20/Linux搭建git、gitolite环境/index.html">
 <meta property="og:site_name" content="flma’s blog">
-<meta property="og:description">
+<meta property="og:description" content="Linux搭建git、gitolite环境1.安装git依赖包，命令
+1yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+2.下载git包，下载地址
+1https://github.com/git/git/releases
+3.解压文件到当前目录，并安装
+1234tar xf git-2.9.2.ta">
+<meta property="og:updated_time" content="2016-07-20T09:42:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flma’s blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Linux搭建git、gitolite环境">
+<meta name="twitter:description" content="Linux搭建git、gitolite环境1.安装git依赖包，命令
+1yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+2.下载git包，下载地址
+1https://github.com/git/git/releases
+3.解压文件到当前目录，并安装
+1234tar xf git-2.9.2.ta">
   
     <link rel="alternative" href="/atom.xml" title="flma’s blog" type="application/atom+xml">
   
@@ -167,9 +183,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-Linux搭建git、gitolite环境" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Linux搭建git、gitolite环境" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/07/20/Linux搭建git、gitolite环境/" class="article-date">
@@ -185,12 +199,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/20/Linux搭建git、gitolite环境/">Linux搭建git、gitolite环境</a>
+    <h1 class="article-title" itemprop="name">
+      Linux搭建git、gitolite环境
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git、gitolite/">git、gitolite</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -248,350 +273,62 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git、gitolite/">git、gitolite</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/19/mac安装maven/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mac下安装maven</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-mac安装maven" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/19/mac安装maven/" class="article-date">
-  	<time datetime="2016-07-19T03:30:50.000Z" itemprop="datePublished">2016-07-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/19/mac安装maven/">mac下安装maven</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="mac下安装maven"><strong>mac下安装maven</strong></h2><p>1.下载[maven]:  <a href="http://maven.apache.org/download.cgi" target="_blank" rel="external">http://maven.apache.org/download.cgi</a><br>，并解压到某个目录下：如我的目录为/usr/local/maven3.3.9</p>
-<p>2.在控制台输入命令<em>/usr/libexec/java_home [-V]</em>,查看javaHome</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/Library/</span>Java<span class="regexp">/JavaVirtualMachines/</span>jdk1.<span class="number">7.0</span>_75.jdk<span class="regexp">/Contents/</span>Home</span><br></pre></td></tr></table></figure>
-<p>3.在命令台输入<em>vi ~/.bash_profile</em>，在文件中加入</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.<span class="number">7.0_75</span>.jdk/Contents/Home</span><br><span class="line">M3_HOME=/usr/local/maven3.<span class="number">3.9</span></span><br><span class="line">PATH=<span class="variable">$M3</span>_HOME/bin:<span class="variable">$PATH</span></span><br><span class="line">export M3_HOME</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
-<p>4.保存，执行<em>source ~/.bash_profile</em></p>
-<p>5.输入mvn -v 不报错，即安装完成</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
-
-
-
-
-  
-    <article id="post-高仿天猫登录-axure第一篇" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/19/高仿天猫登录-axure第一篇/" class="article-date">
-  	<time datetime="2016-07-19T03:14:15.000Z" itemprop="datePublished">2016-07-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/19/高仿天猫登录-axure第一篇/">高仿天猫登录-axure第一篇</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本篇只为了纪录学习axure，如果有侵犯，请联系本人，本人将即时作出调整。</p>
-<ul>
-<li>具体操作如下：</li>
-</ul>
-<p>1.设置页面，是页面内容居中<br><img src="/images/axure/login/login_01.png" alt="这是一张图片"><br>2.拖入矩形框，设置x为0，y为0，w为1190，h为80，border为none<br><img src="/images/axure/login/login_02.png" alt="这是一张图片"><br>3.拖入天猫图片，x为0，y为30，w为1190，h为27<br><img src="/images/axure/login/login_03.png" alt="这是一张图片"><br>4.拖入动态面板，x为0，y为80，w为1190，h为600；右键选中100％ Wide<br><img src="/images/axure/login/login_04.png" alt="这是一张图片"><br>5.双击动态的State1，设置背景色为#4153c3<br><img src="/images/axure/login/login_05.png" alt="这是一张图片"><br>6.在动态State1中，拖入图片，设置x为0，y为0，w为1190，h为600<br><img src="/images/axure/login/login_06.png" alt="这是一张图片"><br>7.拖入矩形框，设置背景色为白色，x为820，y为91，w为350，h为404<br><img src="/images/axure/login/login_07.png" alt="这是一张图片"><br>8.拖入图片，x为953，y为100，w为211，h为57<br><img src="/images/axure/login/login_08.png" alt="这是一张图片"><br>9.拖入文本框，设置字体颜色#3c3c3c，x为847，y为130，w为65，h为16，字体大小为16，加粗<br><img src="/images/axure/login/login_09.png" alt="这是一张图片"><br>10.拖入矩形框，设置border颜色为#cbcbcb，x为847，因为170，w为298，h为40<br><img src="/images/axure/login/login_10.png" alt="这是一张图片"><br>11.拖入图片和文本框，设置隐藏文本框，设置hint text和hint style<br><img src="/images/axure/login/login_11.png" alt="这是一张图片"><br>12.复制账号框，更换图片<br><img src="/images/axure/login/login_12.png" alt="这是一张图片"><br>13.拖入矩形框，设置w为298，h为40，border为#dddddd,字体颜色为#9c9c9c,背景色为#e8e8e8<br><img src="/images/axure/login/login_13.png" alt="这是一张图片"><br>14.拖入矩形框，设置滑块w为40，h为40，border为#cccccc,字体颜色为#737373<br><img src="/images/axure/login/login_14.png" alt="这是一张图片"><br>15.拖入文本框，设置颜色为#6c6c6c，鼠标滑过颜色为#c40000<br><img src="/images/axure/login/login_15.png" alt="这是一张图片"><br>16.拖入矩形框，同上设置</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/axure/">axure</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Linux搭建git、gitolite环境" data-title="Linux搭建git、gitolite环境" data-url="http://yoursite.com/2016/07/20/Linux搭建git、gitolite环境/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-
-  
-    <article id="post-zabbix使用email类型来配置邮箱发送环境" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/28/zabbix使用email类型来配置邮箱发送环境/" class="article-date">
-  	<time datetime="2016-01-28T11:29:18.000Z" itemprop="datePublished">2016-01-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/28/zabbix使用email类型来配置邮箱发送环境/">zabbix使用email类型来配置邮箱发送环境</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>之前按照网上方法配置zabbix email一直不成功，报各种各样的错误。现总结方法如下：</p>
-<ul>
-<li>具体操作如下：</li>
-</ul>
-<p>1.安装postfix或者sendmail（在这里我是用的postfix）</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//安装</span></span><br><span class="line">yum install <span class="keyword">postfix</span></span><br><span class="line"><span class="comment">//启动</span></span><br><span class="line">service <span class="keyword">postfix</span> start</span><br><span class="line"><span class="comment">//设置开机启动</span></span><br><span class="line">chkconfig <span class="keyword">postfix</span> on</span><br></pre></td></tr></table></figure>
-<p>可能会遇见一个问题：Send-Mail: Warning: Inet_protocols: IPv6 Support Is Disabled<br>修改postfix配置文件中的inet_protocols<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//编辑main.cf文件</span></span><br><span class="line">vi /etc/<span class="keyword">postfix</span>/main.cf</span><br><span class="line"><span class="comment">//找到inet_protocols=all改为</span></span><br><span class="line">inet_protocols=ipv4</span><br><span class="line"><span class="comment">//保存</span></span><br><span class="line">:wq!</span><br><span class="line"><span class="comment">//重启postfix</span></span><br><span class="line">/etc/<span class="keyword">init</span>.d/<span class="keyword">postfix</span> restart</span><br></pre></td></tr></table></figure></p>
-<p>2.安装邮件发送工具mailx<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//安装</span></span><br><span class="line">yum install mailx</span><br><span class="line"><span class="comment">//查看安装路径</span></span><br><span class="line">whereis mailx</span><br><span class="line"><span class="comment">//查看版本信息</span></span><br><span class="line">mailx -V</span><br><span class="line"><span class="comment">//发送邮件测试</span></span><br><span class="line">echo <span class="string">"zabbix test mail"</span> <span class="string">|mail -s "</span>zabbix<span class="string">" xxx@163.com</span></span><br></pre></td></tr></table></figure></p>
-<p>3.配置Zabbix服务端邮件报警</p>
-<ol>
-<li>打开Zabbix，打开管理-示警媒介类型-Email，配置如下:<br><img src="/images/email.png" alt="这是一张图片"></li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zabbix/">zabbix</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-mac配置php环境" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/22/mac配置php环境/" class="article-date">
-  	<time datetime="2016-01-22T02:23:21.000Z" itemprop="datePublished">2016-01-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/22/mac配置php环境/">mac下配置php环境</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Apache与PHP的配置"><strong>Apache与PHP的配置</strong></h2><p>Mac系统自带了apache和php，但默认情况下没有开启，打开终端</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl <span class="literal">start</span></span><br></pre></td></tr></table></figure>
-<p>这时在浏览器中输入localhost应该就会出现apache标准的It Works!<br>下面开启php，修改apache配置文件<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vim</span> /etc/apache2/httpd.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure></p>
-<p>找到</p>
-<p>#LoadModule php5_module libexec/apache2/libphp5.so，去掉前面的#<br>默认的www文件夹非常不方便，还是改成在home里开发起来比较顺手，修改apache配置<br>，还是上面的文件</p>
-<p>#将引号中的目录修改为自己的目录<br>DocumentRoot “/Library/WebServer/Documents”<br>……</p>
-<p>#将引号中的目录修改为和上面一样的目录<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">Directory</span> <span class="string">"/Library/WebServer/Documents"</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<p>在自己的目录中创建文件index.php，写入</p>
-<p>&lt;?php phpinfo(); ?&gt;</p>
-<p>重启php服务<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">sudo</span> apachectl restart</span><br></pre></td></tr></table></figure></p>
-<p>在浏览器中访问localhost，应该显示出php的info页</p>
-<p>Mac OS X中没有默认的php.ini文件，但是有对应的模版文件php.ini.default，位于/private/etc/php.ini.default 或者说 /etcphp.ini/default ，可以自行拷贝一份进行修改。<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp <span class="regexp">/private/</span>etc<span class="regexp">/php.ini.default /</span><span class="keyword">private</span><span class="regexp">/etc/</span>php.ini</span><br></pre></td></tr></table></figure></p>
-<p>#解决php页面报错：<br>date(): It is not safe to rely on the system’s timezone settings. You are <em>required</em> to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected ‘Asia/Chongqing’ for ‘CST/8.0/no DST’ instead<br>解决：<br>修改php.ini<br>添加：date.timezone = “Asia/Shanghai”</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-ios之内存管理" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/12/ios之内存管理/" class="article-date">
-  	<time datetime="2015-11-12T14:21:17.000Z" itemprop="datePublished">2015-11-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/12/ios之内存管理/">ios之内存管理</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="手动内存管理"><strong>手动内存管理</strong></h2><p>在创建对象的时候，回生成retainCount变量，alloc，new，retain都会使这个值＋1，对应的release方法则会使这个值－1。当retainCount＝0时系统会调用dealloc方法使系统销毁改对象。所以我们在使用手动内存管理时，要注意一下问题：</p>
-<ul>
-<li>原则：内存管理原则(配对原则)</li>
-</ul>
-<p>创建对象时一定要保证alloc，new，retain时，后面对应出现release方法。<br>如下：</p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void test&#123;</span><br><span class="line">Person *p =[ [Person alloc] init]<span class="comment">;</span></span><br><span class="line">NSLog(@"%d",p.age)<span class="comment">;</span></span><br><span class="line">[p release]<span class="comment">;</span></span><br><span class="line">p=nil<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>避免如下问题</li>
-</ul>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/12/ios之内存管理/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -615,8 +352,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
