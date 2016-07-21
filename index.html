@@ -89,6 +89,10 @@
 				        
 							<li><a href="/tags/ios">ios相关</a></li>
 				        
+							<li><a href="/tags/axure">axure相关</a></li>
+				        
+							<li><a href="/tags/other">其他</a></li>
+				        
 						</ul>
 					</nav>
 					<nav class="header-nav">
@@ -105,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/git、gitolite/" style="font-size: 10px;">git、gitolite</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/zabbix/" style="font-size: 10px;">zabbix</a>
+						<a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/other/" style="font-size: 20px;">other</a>
 					</div>
 				</section>
 				
@@ -152,6 +156,10 @@
 		        
 					<li><a href="/tags/ios">ios相关</a></li>
 		        
+					<li><a href="/tags/axure">axure相关</a></li>
+		        
+					<li><a href="/tags/other">其他</a></li>
+		        
 		        <div class="clearfix"></div>
 				</ul>
 			</nav>
@@ -169,234 +177,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-Linux搭建git、gitolite环境" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/20/Linux搭建git、gitolite环境/" class="article-date">
-  	<time datetime="2016-07-20T09:42:53.000Z" itemprop="datePublished">2016-07-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/20/Linux搭建git、gitolite环境/">Linux搭建git、gitolite环境</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Linux搭建git、gitolite环境"><strong>Linux搭建git、gitolite环境</strong></h2><p>1.安装git依赖包，命令</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> curl-devel expat-devel gettext-devel openssl-devel zlib-devel</span><br></pre></td></tr></table></figure>
-<p>2.下载git包，下载地址</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>/<span class="regexp">/github.com/git</span><span class="regexp">/git/releases</span></span><br></pre></td></tr></table></figure>
-<p>3.解压文件到当前目录，并安装</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar xf git-<span class="number">2.9</span><span class="number">.2</span>.tar.gz</span><br><span class="line">cd git-<span class="number">2.9</span><span class="number">.2</span></span><br><span class="line">make prefix=/usr/local/git all</span><br><span class="line">make prefix=/usr/local/git install</span><br></pre></td></tr></table></figure>
-<p>4.增加软连接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln <span class="operator">-s</span> /usr/<span class="built_in">local</span>/git/bin/*  /usr/bin/</span><br></pre></td></tr></table></figure>
-<p>5.验证安装结果，显示版本号，表示安装成功</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
-<p>6.创建git用户</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">adduser </span>git</span><br></pre></td></tr></table></figure>
-<p>7.在git用户下安装gitolite，命令如下</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">su</span> git</span><br><span class="line"><span class="keyword">cd</span></span><br><span class="line"><span class="keyword">mkdir</span> bin</span><br></pre></td></tr></table></figure>
-<p>8.下载gitolite源码<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/sitaramc/gitolite.git</span><br></pre></td></tr></table></figure></p>
-<p>9.等待下载完成，输入命令</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span></span><br></pre></td></tr></table></figure>
-<p>显示结果 </p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bin </span>gitolite</span><br></pre></td></tr></table></figure>
-<p>10.安装gitolite，命令</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.<span class="regexp">/gitolite/i</span>nstall --to <span class="regexp">/home/gi</span>t<span class="regexp">/bin/</span></span><br></pre></td></tr></table></figure>
-<p>11.输入命令</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> bin/</span><br></pre></td></tr></table></figure>
-<p>显示结果</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">commands gitolite gitolite-shell <span class="class"><span class="keyword">lib</span>   <span class="title">syntactic</span>-<span class="title">sugar</span>  <span class="title">triggers</span>  <span class="title">VERSION</span>  <span class="title">VREF</span></span></span><br></pre></td></tr></table></figure>
-<p>12.配置gitolite管理员，需要切换到root用户，命令</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br><span class="line">ssh-keygen</span><br><span class="line">cp .ssh/id_rsa.<span class="keyword">pub</span> /tmp/admin.<span class="keyword">pub</span></span><br></pre></td></tr></table></figure>
-<p>13.切换回git用户，为gitolite配置管理员</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">su</span> git</span><br><span class="line"><span class="keyword">bin/gitolite </span>setup -pk /tmp/admin.pub</span><br></pre></td></tr></table></figure>
-<p>显示结果如下</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="code"> Initialized empty Git repository in /home/git/repositories/gitolite-admin.git</span></span><br><span class="line">/Initialized empty Git repository in /home/git/repositories/testing.git/</span><br><span class="line"><span class="label">WARNING: </span>/home/git/.ssh missing; creating a new one    </span><br><span class="line">(this is normal on a brand new install)</span><br><span class="line"><span class="label">WARNING: </span>/home/git/.ssh/authorized<span class="emphasis">_keys missing; creating a new one    </span><br><span class="line">(this is normal on a brand new install)</span></span><br></pre></td></tr></table></figure>
-<p>输入命令</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span></span><br></pre></td></tr></table></figure>
-<p>显示结果如下：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin  gitolite  projects<span class="class">.list</span>  repositories</span><br></pre></td></tr></table></figure>
-<p>14.克隆gitolite-admin，切换回root用户，命令</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br><span class="line">git clone git<span class="variable">@IP</span><span class="symbol">:gitolite-admin</span></span><br></pre></td></tr></table></figure>
-<p>显示结果</p>
-<figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="type">Cloning</span> into <span class="symbol">'gitolite</span>-admin'...<span class="type">The</span> authenticity <span class="keyword">of</span> host </span><br><span class="line"><span class="symbol">'IP'</span> can't be established.</span><br><span class="line"><span class="type">RSA</span> key fingerprint is c4:<span class="number">34</span>:<span class="number">02</span>:<span class="number">55</span>:ad:<span class="number">42</span>:<span class="number">8</span>a:<span class="number">65</span>:ba:<span class="number">94</span>:<span class="number">00</span>:<span class="number">20</span>:<span class="number">48</span>:d7:<span class="number">3</span>c:<span class="number">33.</span></span><br><span class="line"><span class="type">Are</span> you sure you want <span class="keyword">to</span> continue connecting (yes/no)? yes</span><br><span class="line">#这里是第一次连接，需要输入yes进行确认</span><br><span class="line"><span class="type">Warning</span>: <span class="type">Permanently</span> added <span class="char">'192.168.3.27'</span> (<span class="type">RSA</span>) <span class="keyword">to</span> the <span class="built_in">list</span> <span class="keyword">of</span> known hosts.</span><br><span class="line">remote: <span class="type">Counting</span> objects: <span class="number">6</span>, <span class="keyword">done</span>.</span><br><span class="line">remote: <span class="type">Compressing</span> objects: <span class="number">100</span>% (<span class="number">4</span>/<span class="number">4</span>), <span class="keyword">done</span>.</span><br><span class="line"><span class="type">Receiving</span> objects: <span class="number">100</span>% (<span class="number">6</span>/<span class="number">6</span>), <span class="number">734</span> <span class="built_in">bytes</span> | <span class="number">0</span> <span class="built_in">bytes</span>/s, <span class="keyword">done</span>.</span><br><span class="line">remote: <span class="type">Total</span> <span class="number">6</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line"><span class="type">Checking</span> connectivity... <span class="keyword">done</span>.</span><br></pre></td></tr></table></figure>
-<p>输入命令<em>ls</em>,显示</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">conf</span> keydir</span><br></pre></td></tr></table></figure>
-<p>15.创建git用户,命令</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="class">.email</span> <span class="string">"xx@qq.com"</span></span><br><span class="line">git config --global user<span class="class">.name</span> <span class="string">"lyao"</span></span><br></pre></td></tr></table></figure>
-<p>至此安装完成！！！</p>
-<h2 id="添加git管理员"><strong>添加git管理员</strong></h2><p>1.把管理员的key放倒gitolite-admin 的keydir目录下<br>2.编辑conf目录下的gitolite.conf,添加管理员的keydir的文件名添加到@staff中</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@staff</span> = mafengli admin</span><br><span class="line"><span class="variable">@service</span> = root git admin</span><br><span class="line">repo gitolite-admin</span><br><span class="line">    RW+     =   <span class="variable">@staff</span> root</span><br><span class="line"></span><br><span class="line">repo testing</span><br><span class="line">    RW+     =   <span class="variable">@all</span></span><br><span class="line">include <span class="string">"conf/*.conf"</span></span><br></pre></td></tr></table></figure>
-<h2 id="添加git仓库"><strong>添加git仓库</strong></h2><p>1.在conf目录创建目录conf<br>2.在conf/conf目录创建test.conf,文件内容如下:</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">repo</span> test</span><br><span class="line">    R       =     <span class="variable">@service</span></span><br><span class="line">    RW+     =     <span class="variable">@staff</span> mafengli</span><br></pre></td></tr></table></figure>
-<p>3.添加访问这个仓库的用户追加到mafengli 后面即可</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git、gitolite/">git、gitolite</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-mac安装maven" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/19/mac安装maven/" class="article-date">
-  	<time datetime="2016-07-19T03:30:50.000Z" itemprop="datePublished">2016-07-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/19/mac安装maven/">mac下安装maven</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="mac下安装maven"><strong>mac下安装maven</strong></h2><p>1.下载[maven]:  <a href="http://maven.apache.org/download.cgi" target="_blank" rel="external">http://maven.apache.org/download.cgi</a><br>，并解压到某个目录下：如我的目录为/usr/local/maven3.3.9</p>
-<p>2.在控制台输入命令<em>/usr/libexec/java_home [-V]</em>,查看javaHome</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/Library/</span>Java<span class="regexp">/JavaVirtualMachines/</span>jdk1.<span class="number">7.0</span>_75.jdk<span class="regexp">/Contents/</span>Home</span><br></pre></td></tr></table></figure>
-<p>3.在命令台输入<em>vi ~/.bash_profile</em>，在文件中加入</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.<span class="number">7.0_75</span>.jdk/Contents/Home</span><br><span class="line">M3_HOME=/usr/local/maven3.<span class="number">3.9</span></span><br><span class="line">PATH=<span class="variable">$M3</span>_HOME/bin:<span class="variable">$PATH</span></span><br><span class="line">export M3_HOME</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
-<p>4.保存，执行<em>source ~/.bash_profile</em></p>
-<p>5.输入mvn -v 不报错，即安装完成</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-高仿天猫登录-axure第一篇" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/19/高仿天猫登录-axure第一篇/" class="article-date">
-  	<time datetime="2016-07-19T03:14:15.000Z" itemprop="datePublished">2016-07-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/19/高仿天猫登录-axure第一篇/">高仿天猫登录-axure第一篇</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本篇只为了纪录学习axure，如果有侵犯，请联系本人，本人将即时作出调整。</p>
-<ul>
-<li>具体操作如下：</li>
-</ul>
-<p>1.设置页面，是页面内容居中<br><img src="/images/axure/login/login_01.png" alt="这是一张图片"><br>2.拖入矩形框，设置x为0，y为0，w为1190，h为80，border为none<br><img src="/images/axure/login/login_02.png" alt="这是一张图片"><br>3.拖入天猫图片，x为0，y为30，w为1190，h为27<br><img src="/images/axure/login/login_03.png" alt="这是一张图片"><br>4.拖入动态面板，x为0，y为80，w为1190，h为600；右键选中100％ Wide<br><img src="/images/axure/login/login_04.png" alt="这是一张图片"><br>5.双击动态的State1，设置背景色为#4153c3<br><img src="/images/axure/login/login_05.png" alt="这是一张图片"><br>6.在动态State1中，拖入图片，设置x为0，y为0，w为1190，h为600<br><img src="/images/axure/login/login_06.png" alt="这是一张图片"><br>7.拖入矩形框，设置背景色为白色，x为820，y为91，w为350，h为404<br><img src="/images/axure/login/login_07.png" alt="这是一张图片"><br>8.拖入图片，x为953，y为100，w为211，h为57<br><img src="/images/axure/login/login_08.png" alt="这是一张图片"><br>9.拖入文本框，设置字体颜色#3c3c3c，x为847，y为130，w为65，h为16，字体大小为16，加粗<br><img src="/images/axure/login/login_09.png" alt="这是一张图片"><br>10.拖入矩形框，设置border颜色为#cbcbcb，x为847，因为170，w为298，h为40<br><img src="/images/axure/login/login_10.png" alt="这是一张图片"><br>11.拖入图片和文本框，设置隐藏文本框，设置hint text和hint style<br><img src="/images/axure/login/login_11.png" alt="这是一张图片"><br>12.复制账号框，更换图片<br><img src="/images/axure/login/login_12.png" alt="这是一张图片"><br>13.拖入矩形框，设置w为298，h为40，border为#dddddd,字体颜色为#9c9c9c,背景色为#e8e8e8<br><img src="/images/axure/login/login_13.png" alt="这是一张图片"><br>14.拖入矩形框，设置滑块w为40，h为40，border为#cccccc,字体颜色为#737373<br><img src="/images/axure/login/login_14.png" alt="这是一张图片"><br>15.拖入文本框，设置颜色为#6c6c6c，鼠标滑过颜色为#c40000<br><img src="/images/axure/login/login_15.png" alt="这是一张图片"><br>16.拖入矩形框，同上设置</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/axure/">axure</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
     <article id="post-zabbix使用email类型来配置邮箱发送环境" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/28/zabbix使用email类型来配置邮箱发送环境/" class="article-date">
-  	<time datetime="2016-01-28T11:29:18.000Z" itemprop="datePublished">2016-01-28</time>
+      <a href="/2016/07/21/zabbix使用email类型来配置邮箱发送环境/" class="article-date">
+  	<time datetime="2016-07-21T10:02:57.000Z" itemprop="datePublished">2016-07-21</time>
 </a>
     </div>
   
@@ -409,7 +194,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/28/zabbix使用email类型来配置邮箱发送环境/">zabbix使用email类型来配置邮箱发送环境</a>
+      <a class="article-title" href="/2016/07/21/zabbix使用email类型来配置邮箱发送环境/">zabbix使用email类型来配置邮箱发送环境</a>
     </h1>
   
 
@@ -438,7 +223,7 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zabbix/">zabbix</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
 	</div>
 
       
@@ -461,8 +246,8 @@
     <article id="post-mac配置php环境" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/22/mac配置php环境/" class="article-date">
-  	<time datetime="2016-01-22T02:23:21.000Z" itemprop="datePublished">2016-01-22</time>
+      <a href="/2016/07/21/mac配置php环境/" class="article-date">
+  	<time datetime="2016-07-21T10:02:50.000Z" itemprop="datePublished">2016-07-21</time>
 </a>
     </div>
   
@@ -475,7 +260,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/22/mac配置php环境/">mac下配置php环境</a>
+      <a class="article-title" href="/2016/07/21/mac配置php环境/">mac下配置php环境</a>
     </h1>
   
 
@@ -505,11 +290,197 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
 	</div>
 
       
 
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-mac安装maven" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/21/mac安装maven/" class="article-date">
+  	<time datetime="2016-07-21T10:02:41.000Z" itemprop="datePublished">2016-07-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/21/mac安装maven/">mac下安装maven</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="mac下安装maven"><strong>mac下安装maven</strong></h2><p>1.下载[maven]:  <a href="http://maven.apache.org/download.cgi" target="_blank" rel="external">http://maven.apache.org/download.cgi</a><br>，并解压到某个目录下：如我的目录为/usr/local/maven3.3.9</p>
+<p>2.在控制台输入命令<em>/usr/libexec/java_home [-V]</em>,查看javaHome</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/Library/</span>Java<span class="regexp">/JavaVirtualMachines/</span>jdk1.<span class="number">7.0</span>_75.jdk<span class="regexp">/Contents/</span>Home</span><br></pre></td></tr></table></figure>
+<p>3.在命令台输入<em>vi ~/.bash_profile</em>，在文件中加入</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.<span class="number">7.0_75</span>.jdk/Contents/Home</span><br><span class="line">M3_HOME=/usr/local/maven3.<span class="number">3.9</span></span><br><span class="line">PATH=<span class="variable">$M3</span>_HOME/bin:<span class="variable">$PATH</span></span><br><span class="line">export M3_HOME</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
+<p>4.保存，执行<em>source ~/.bash_profile</em></p>
+<p>5.输入mvn -v 不报错，即安装完成</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Linux搭建git、gitolite环境" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/21/Linux搭建git、gitolite环境/" class="article-date">
+  	<time datetime="2016-07-21T10:02:18.000Z" itemprop="datePublished">2016-07-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/21/Linux搭建git、gitolite环境/">Linux搭建git、gitolite环境</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Linux搭建git、gitolite环境"><strong>Linux搭建git、gitolite环境</strong></h2><p>1.安装git依赖包，命令</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> curl-devel expat-devel gettext-devel openssl-devel zlib-devel</span><br></pre></td></tr></table></figure>
+<p>2.下载git包，下载地址</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>/<span class="regexp">/github.com/git</span><span class="regexp">/git/releases</span></span><br></pre></td></tr></table></figure>
+<p>3.解压文件到当前目录，并安装</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar xf git-<span class="number">2.9</span><span class="number">.2</span>.tar.gz</span><br><span class="line">cd git-<span class="number">2.9</span><span class="number">.2</span></span><br><span class="line">make prefix=/usr/local/git all</span><br><span class="line">make prefix=/usr/local/git install</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/07/21/Linux搭建git、gitolite环境/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-高仿天猫登录-axure第一篇" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/21/高仿天猫登录-axure第一篇/" class="article-date">
+  	<time datetime="2016-07-21T09:57:30.000Z" itemprop="datePublished">2016-07-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/21/高仿天猫登录-axure第一篇/">高仿天猫登录-axure第一篇</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本篇只为了纪录学习axure，如果有侵犯，请联系本人，本人将即时作出调整。</p>
+<ul>
+<li>具体操作如下：</li>
+</ul>
+<p>1.设置页面，是页面内容居中<br><img src="/images/axure/login/login_01.png" alt="这是一张图片"><br>2.拖入矩形框，设置x为0，y为0，w为1190，h为80，border为none<br><img src="/images/axure/login/login_02.png" alt="这是一张图片"><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/axure/">axure</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/07/21/高仿天猫登录-axure第一篇/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
