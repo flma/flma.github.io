@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/other/" style="font-size: 20px;">other</a>
+						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/other/" style="font-size: 20px;">other</a> <a href="/tags/php/" style="font-size: 10px;">php</a>
 					</div>
 				</section>
 				
@@ -176,6 +176,69 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Linux升级phpopenssl1.0.2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/31/Linux升级phpopenssl1.0.2/" class="article-date">
+  	<time datetime="2016-08-31T09:05:57.000Z" itemprop="datePublished">2016-08-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/31/Linux升级phpopenssl1.0.2/">Linux升级php openssl</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装openssl"><strong>安装openssl</strong></h2><p>1.下载openssl-1.0.2h.tar.gz</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget <span class="string">https:</span><span class="comment">//www.openssl.org/source/openssl-1.0.2h.tar.gz</span></span><br></pre></td></tr></table></figure>
+<p>2.更新zlib</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> -y zlib</span><br></pre></td></tr></table></figure>
+<p>3.解压安装openssl</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">tar zxf openssl-<span class="number">1.0</span><span class="number">.2</span>h.tar.gz</span><br><span class="line">cd openssl-<span class="number">1.0</span><span class="number">.2</span>h</span><br><span class="line">./config shared zlib</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">mv <span class="regexp">/usr/</span>bin<span class="regexp">/openssl /</span>usr<span class="regexp">/bin/</span>openssl.bak</span><br><span class="line">mv <span class="regexp">/usr/</span>include<span class="regexp">/openssl /</span>usr<span class="regexp">/include/</span>openssl.bak</span><br><span class="line">ln -s <span class="regexp">/usr/</span>local<span class="regexp">/ssl/</span>bin<span class="regexp">/openssl /</span>usr<span class="regexp">/bin/</span>openssl</span><br><span class="line">ln -s <span class="regexp">/usr/</span>local<span class="regexp">/ssl/</span>include<span class="regexp">/openssl /</span>usr<span class="regexp">/include/</span>openssl</span><br><span class="line">echo “<span class="regexp">/usr/</span>local<span class="regexp">/ssl/</span>lib” &gt;&gt; <span class="regexp">/etc/</span>ld.so.conf</span><br><span class="line">ldconfig -v</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/08/31/Linux升级phpopenssl1.0.2/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-Linux搭建nginx,mysql,php" class="article article-type-post" itemscope itemprop="blogPost">
   
