@@ -91,6 +91,8 @@
 				        
 							<li><a href="/tags/axure">axure相关</a></li>
 				        
+							<li><a href="/tags/php">php相关</a></li>
+				        
 							<li><a href="/tags/other">其他</a></li>
 				        
 						</ul>
@@ -109,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/other/" style="font-size: 20px;">other</a> <a href="/tags/php/" style="font-size: 10px;">php</a>
+						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/other/" style="font-size: 20px;">other</a> <a href="/tags/php/" style="font-size: 15px;">php</a>
 					</div>
 				</section>
 				
@@ -158,6 +160,8 @@
 		        
 					<li><a href="/tags/axure">axure相关</a></li>
 		        
+					<li><a href="/tags/php">php相关</a></li>
+		        
 					<li><a href="/tags/other">其他</a></li>
 		        
 		        <div class="clearfix"></div>
@@ -177,11 +181,70 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-PHP配置大文件上传" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/10/PHP配置大文件上传/" class="article-date">
+  	<time datetime="2016-10-10T01:25:49.000Z" itemprop="datePublished">2016-10-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/10/PHP配置大文件上传/">PHP配置大文件上传</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>1.搜百度需要配置php.ini的下列信息，重启之后，<font color="red">配置不生效</font></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">post_max_size</span><br><span class="line">upload_max_filesize</span><br><span class="line">max_input_time</span><br><span class="line">max_execution_time</span><br><span class="line">memory_<span class="built_in">limit</span></span><br></pre></td></tr></table></figure>
+<p>2.需要修改php-fpm.config,重启之后，生效</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">php_value<span class="string">[memory_limit]</span> = 150M</span><br><span class="line">php_value<span class="string">[max_execution_time]</span> = <span class="number">300</span></span><br><span class="line">php_value<span class="string">[max_input_time]</span> = <span class="number">300</span></span><br><span class="line">php_value<span class="string">[post_max_size]</span> = 200M</span><br><span class="line">php_value<span class="string">[upload_max_filesize]</span> = 250M</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-Linux升级phpopenssl1.0.2" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/08/31/Linux升级phpopenssl1.0.2/" class="article-date">
-  	<time datetime="2016-08-31T09:05:57.000Z" itemprop="datePublished">2016-08-31</time>
+  	<time datetime="2016-08-31T09:22:36.000Z" itemprop="datePublished">2016-08-31</time>
 </a>
     </div>
   
