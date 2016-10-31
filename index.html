@@ -177,6 +177,69 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Linux搭建nginx,mysql,php" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/31/Linux搭建nginx,mysql,php/" class="article-date">
+  	<time datetime="2016-10-31T14:43:33.000Z" itemprop="datePublished">2016-10-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/31/Linux搭建nginx,mysql,php/">Linux搭建mysql、nginx、php环境</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装mysql"><strong>安装mysql</strong></h2><p>1.下载mysql安装包：mysql-5.6.32-linux-glibc2.5-x86_64.tar.gz，解压</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">tar</span> <span class="tag">zxf</span> <span class="tag">mysql-5</span><span class="class">.6</span><span class="class">.32-linux-glibc2</span><span class="class">.5-x86_64</span><span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
+<p>2.复制mysql到/usr/local/mysql目录下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r mysql-<span class="number">5.6</span><span class="number">.32</span>-linux-glibc2<span class="number">.5</span>-x86_64<span class="comment">/* /usr/local/mysql</span></span><br></pre></td></tr></table></figure>
+<p>3.添加系统mysql组和mysql用户</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">groupadd</span> mysql</span><br><span class="line">useradd -r -g mysql mysql</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/10/31/Linux搭建nginx,mysql,php/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-PHP配置大文件上传" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -283,69 +346,6 @@
       
         <p class="article-more-link">
           <a  href="/2016/08/31/Linux升级phpopenssl1.0.2/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Linux搭建nginx,mysql,php" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/31/Linux搭建nginx,mysql,php/" class="article-date">
-  	<time datetime="2016-08-31T08:54:08.000Z" itemprop="datePublished">2016-08-31</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/31/Linux搭建nginx,mysql,php/">Linux搭建mysql、nginx、php环境</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="安装mysql"><strong>安装mysql</strong></h2><p>1.下载mysql安装包：mysql-5.6.32-linux-glibc2.5-x86_64.tar.gz，解压</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">tar</span> <span class="tag">zxf</span> <span class="tag">mysql-5</span><span class="class">.6</span><span class="class">.32-linux-glibc2</span><span class="class">.5-x86_64</span><span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
-<p>2.复制mysql到/usr/local/mysql目录下</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r mysql-<span class="number">5.6</span><span class="number">.32</span>-linux-glibc2<span class="number">.5</span>-x86_64<span class="comment">/* /usr/local/mysql</span></span><br></pre></td></tr></table></figure>
-<p>3.添加系统mysql组和mysql用户</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">groupadd</span> mysql</span><br><span class="line">useradd -r -g mysql mysql</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/08/31/Linux搭建nginx,mysql,php/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
