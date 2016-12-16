@@ -87,11 +87,9 @@
 				        
 							<li><a href="/archives">所有文章</a></li>
 				        
-							<li><a href="/tags/ios">ios相关</a></li>
+							<li><a href="/tags/java">java教程</a></li>
 				        
-							<li><a href="/tags/axure">axure相关</a></li>
-				        
-							<li><a href="/tags/php">php相关</a></li>
+							<li><a href="/tags/other">其他</a></li>
 				        
 						</ul>
 					</nav>
@@ -109,7 +107,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/other/" style="font-size: 20px;">other</a> <a href="/tags/php/" style="font-size: 15px;">php</a>
+						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/other/" style="font-size: 20px;">other</a> <a href="/tags/php/" style="font-size: 15px;">php</a>
 					</div>
 				</section>
 				
@@ -154,11 +152,9 @@
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
-					<li><a href="/tags/ios">ios相关</a></li>
+					<li><a href="/tags/java">java教程</a></li>
 		        
-					<li><a href="/tags/axure">axure相关</a></li>
-		        
-					<li><a href="/tags/php">php相关</a></li>
+					<li><a href="/tags/other">其他</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -176,6 +172,74 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-java环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/16/java环境搭建/" class="article-date">
+  	<time datetime="2016-12-16T08:32:24.000Z" itemprop="datePublished">2016-12-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/16/java环境搭建/">java环境搭建</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#什么是java？<br>java是一种面向对象程序设计（oop）语言，在java中万事万物皆对象；java是一种跨平台的开发语言，实现了“一次编写，随处运行”。</p>
+<p>#如何安装java环境？</p>
+<ul>
+<li>下载jdk1.8 <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">点击下载</a>，因为我是64位系统，所以选择下载x64的版本</li>
+<li>点击安装包，出现安装界面<br><img src="http://upload-images.jianshu.io/upload_images/2830312-df9c988f9bc89713.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="6483CF7F-8133-4CEC-BDA3-B5B4EDDF1127.png"></li>
+<li>点击下一步，更改安装路径，这里我安装到C:/java/jdk1.8目录下。<br><img src="http://upload-images.jianshu.io/upload_images/2830312-b251da784142e227.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="DA68F5C1-9479-4E64-8E37-394DF2A3B6C5.png"></li>
+<li>点击下一步，会弹出对话框，提示安装jre，更改安装路径C:/java/jre1.8<br><img src="http://upload-images.jianshu.io/upload_images/2830312-471a2fa4c4addcb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="53F685A6-C413-4E32-B22B-34F3BB6D2030.png"></li>
+<li>点击下一步，出现下面界面，点击关闭<br><img src="http://upload-images.jianshu.io/upload_images/2830312-d72693758a42985b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="D4DEEF50-7780-4770-BC16-AB69D6A01010.png"></li>
+<li>配置环境变量，计算机→属性→高级系统设置→高级→环境变量<br><img src="http://upload-images.jianshu.io/upload_images/2830312-4fef7cb03fd22e31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="56D6C833-88D6-4E3A-AB86-51F5E11074EA.png"></li>
+<li>新建系统变量JAVA_HOME，填写idk的安装路径c:/java/jdk1.8<br><img src="http://upload-images.jianshu.io/upload_images/2830312-c864b02921896c94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="85090D04-AACA-4705-9EC0-C52A60D44438.png"></li>
+<li>系统变量→寻找 Path 变量→编辑。在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;<br>（注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码)<br><img src="http://upload-images.jianshu.io/upload_images/2830312-fd9fc2f27b075b4b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2B4E11A5-8D6E-46AA-82E7-25FB18FF1D64.png"></li>
+<li>系统变量→新建CLASSPATH 变量,变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）<br><img src="http://upload-images.jianshu.io/upload_images/2830312-d7b426235cd9d8f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="A0DC8D97-4CDE-464C-81FF-7BAC842B5163.png"><br>#如何验证是否安装成功？</li>
+<li>打开开始菜单，输入cmd，在命令提示符中输入命令java -version,显示如下信息，代表安装成功<br><img src="http://upload-images.jianshu.io/upload_images/2830312-26a84742f6b114d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="21ADE90D-B18E-4DD9-9FAB-AFF97070DF06.png"></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-git常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -759,72 +823,10 @@
 
 
   
-    <article id="post-ios之内存管理" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2015/11/12/ios之内存管理/" class="article-date">
-  	<time datetime="2015-11-12T14:21:17.000Z" itemprop="datePublished">2015-11-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/12/ios之内存管理/">ios之内存管理</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="手动内存管理"><strong>手动内存管理</strong></h2><p>在创建对象的时候，回生成retainCount变量，alloc，new，retain都会使这个值＋1，对应的release方法则会使这个值－1。当retainCount＝0时系统会调用dealloc方法使系统销毁改对象。所以我们在使用手动内存管理时，要注意一下问题：</p>
-<ul>
-<li>原则：内存管理原则(配对原则)</li>
-</ul>
-<p>创建对象时一定要保证alloc，new，retain时，后面对应出现release方法。<br>如下：</p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void test&#123;</span><br><span class="line">Person *p =[ [Person alloc] init]<span class="comment">;</span></span><br><span class="line">NSLog(@"%d",p.age)<span class="comment">;</span></span><br><span class="line">[p release]<span class="comment">;</span></span><br><span class="line">p=nil<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>避免如下问题</li>
-</ul>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/12/ios之内存管理/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
