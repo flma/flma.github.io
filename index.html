@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/other/" style="font-size: 20px;">other</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/springmvc/" style="font-size: 10px;">springmvc</a>
+						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/axure/" style="font-size: 10px;">axure</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/java/" style="font-size: 16.67px;">java</a> <a href="/tags/other/" style="font-size: 20px;">other</a> <a href="/tags/php/" style="font-size: 13.33px;">php</a> <a href="/tags/springmvc/" style="font-size: 10px;">springmvc</a>
 					</div>
 				</section>
 				
@@ -176,6 +176,64 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-java入门教程(三)基本类型" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/10/java入门教程(三)基本类型/" class="article-date">
+  	<time datetime="2017-02-10T09:46:51.000Z" itemprop="datePublished">2017-02-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/10/java入门教程(三)基本类型/">java入门教程(三)基本类型</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="java基本类型">java基本类型</h1><p>java基本类型具有不变性，所谓不变性是指基本类型所占存储空间的大小不随机器硬件架构的变化而变化，这也使java程序更具可移植性的原因之一。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2017/02/10/java入门教程(三)基本类型/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-ueditor Java版更改上传文件路径" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -743,73 +801,6 @@
 
 
   
-    <article id="post-mac配置php环境" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/21/mac配置php环境/" class="article-date">
-  	<time datetime="2016-07-21T10:02:50.000Z" itemprop="datePublished">2016-07-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/21/mac配置php环境/">mac下配置php环境</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Apache与PHP的配置"><strong>Apache与PHP的配置</strong></h2><p>Mac系统自带了apache和php，但默认情况下没有开启，打开终端</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl <span class="literal">start</span></span><br></pre></td></tr></table></figure>
-<p>这时在浏览器中输入localhost应该就会出现apache标准的It Works!<br>下面开启php，修改apache配置文件<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vim</span> /etc/apache2/httpd.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure></p>
-<p>找到</p>
-<p>#LoadModule php5_module libexec/apache2/libphp5.so，去掉前面的#<br>默认的www文件夹非常不方便，还是改成在home里开发起来比较顺手，修改apache配置<br>，还是上面的文件</p>
-<p>#将引号中的目录修改为自己的目录<br>DocumentRoot “/Library/WebServer/Documents”<br>……</p>
-<p>#将引号中的目录修改为和上面一样的目录<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">Directory</span> <span class="string">"/Library/WebServer/Documents"</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<p>在自己的目录中创建文件index.php，写入</p>
-<p>&lt;?php phpinfo(); ?&gt;</p>
-<p>重启php服务<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">sudo</span> apachectl restart</span><br></pre></td></tr></table></figure></p>
-<p>在浏览器中访问localhost，应该显示出php的info页</p>
-<p>Mac OS X中没有默认的php.ini文件，但是有对应的模版文件php.ini.default，位于/private/etc/php.ini.default 或者说 /etcphp.ini/default ，可以自行拷贝一份进行修改。<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp <span class="regexp">/private/</span>etc<span class="regexp">/php.ini.default /</span><span class="keyword">private</span><span class="regexp">/etc/</span>php.ini</span><br></pre></td></tr></table></figure></p>
-<p>#解决php页面报错：<br>date(): It is not safe to rely on the system’s timezone settings. You are <em>required</em> to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected ‘Asia/Chongqing’ for ‘CST/8.0/no DST’ instead<br>解决：<br>修改php.ini<br>添加：date.timezone = “Asia/Shanghai”</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -820,7 +811,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 flma
+    		&copy; 2017 flma
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
